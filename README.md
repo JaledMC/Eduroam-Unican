@@ -13,18 +13,18 @@ Edit wpa_supplicant.conf file in /etc/wpa_supplicant/
 `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`  
 
 Paste this block on the file:
-`
-network={    
-	ssid="eduroam"    
-	scan_ssid=1    
-	key_mgmt=WPA-EAP    
-	eap=PEAP    
-	identity="name@alumnos.unican.es"    
-	anonymous_identity="name@alumnos.unican.es"    
-	password="pass"    
-	phase1="peaplabel=0"    
-	phase2="auth=MSCHAPV2"    
-}    
-`
+
+`network={    `  
+`	ssid="eduroam"    `  
+`	scan_ssid=1    `   
+`	key_mgmt=WPA-EAP    `  
+`	eap=PEAP    `  
+`	identity="name@alumnos.unican.es"    `    
+`	anonymous_identity="name@alumnos.unican.es"    `  
+`	password="pass"    `  
+`	phase1="peaplabel=0"    `  
+`	phase2="auth=MSCHAPV2"    `  
+`}`      
+
 
 Or copy the wpa_supplicant.conf of this repo there. Change the identity with your proper email and password.
