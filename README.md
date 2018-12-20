@@ -27,4 +27,6 @@ Paste this block on the file:
 `}`      
 
 
-Or copy the wpa_supplicant.conf of this repo there. Change the identity with your proper email and password.
+Or copy the [wpa_supplicant.conf](https://github.com/JaledMC/Eduroam-Unican/blob/master/wpa_supplicant.conf) of this repo there. Change the identity with your proper email and password.
+
+PD: I can't use ssh with Unican Eduroam. Maybe it's not enabled.
