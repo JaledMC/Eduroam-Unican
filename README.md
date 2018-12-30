@@ -26,7 +26,27 @@ Paste this block on the file:
 `	phase2="auth=MSCHAPV2"    `  
 `}`      
 
-
 Or copy the [wpa_supplicant.conf](https://github.com/JaledMC/Eduroam-Unican/blob/master/wpa_supplicant.conf) of this repo there. Change the identity with your proper email and password.
 
 PD: I can't use ssh with Unican Eduroam. Maybe it's not enabled.
+
+# Problems
+If you faced a problem like this:
+ > ctrl_iface exists and seems to be in use - cannot override it
+Delete '/run/wpa_supplicant/whatever' manually if it is not used anymore
+Failed to initialize control interface '/run/wpa_supplicant'.
+You may have another wpa_supplicant process already running or the file was
+left by an unclean termination of wpa_supplicant in which case you will need
+to manually remove this file before starting wpa_supplicant again
+
+As the text suggest, you have to remove the file with this command:
+> sudo rm /run/wpa_supplicant/whatever
+
+And then kill all wpa_supplicant process and restart it:
+> sudo killall wpa_supplicant
+> wpa_supplicant
+
+
+# References
+https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=86253&sid=cad4754961dab25b4f88e1c851ee15a0  
+https://raspberrypi.stackexchange.com/questions/53315/setting-up-a-wifi-direct-connection-using-pi3arch-linux-arm-and-android  
